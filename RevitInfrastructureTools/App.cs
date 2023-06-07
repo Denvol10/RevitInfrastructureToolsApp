@@ -46,16 +46,21 @@ namespace RevitInfrastructureTools
 
         private void CreateDWGtoRVTRibbon(UIControlledApplication uiapp, string tabName)
         {
-            string str = "DWG to RVT";
+            string str = "DWG в RVT";
             RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
             ribbonPanel.AddItem(CreateButtonData("DWGtoRVTLineConverter", "RevitCommand"));
         }
 
         private void CreateBridgeDeckRibbon(UIControlledApplication uiapp, string tabName)
         {
-            string str = "Bridge Deck";
+            string str = "Мостовые плиты";
             RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
+
             ribbonPanel.AddItem(CreateButtonData("BridgeDeck", "RevitCommand"));
+
+            PushButtonData buttonData1 = CreateButtonData("AdaptationForSlopeOnePoint", "RevitCommand");
+            PushButtonData buttonData2 = CreateButtonData("AdaptationForSlopeTwoPoints", "RevitCommand");
+            ribbonPanel.AddStackedItems(buttonData1, buttonData2);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
