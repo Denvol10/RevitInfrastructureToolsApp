@@ -57,6 +57,7 @@ namespace RevitInfrastructureTools
             RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
 
             ribbonPanel.AddItem(CreateButtonData("BridgeDeck", "RevitCommand"));
+            ribbonPanel.AddItem(CreateButtonData("ApproachSlab", "RevitCommand"));
 
             PushButtonData buttonData1 = CreateButtonData("AdaptationForSlopeOnePoint", "RevitCommand");
             PushButtonData buttonData2 = CreateButtonData("AdaptationForSlopeTwoPoints", "RevitCommand");
