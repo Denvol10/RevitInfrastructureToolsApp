@@ -74,6 +74,8 @@ namespace RevitInfrastructureTools
             string textPath = Path.Combine(dataPath, className + ".txt");
             string[] text = File.ReadAllLines(textPath);
             string title = text[0];
+            if (title.Contains("/"))
+                title = title.Replace("/", "\n");
             string tooltip = text[1];
             string url = text[2];
 
