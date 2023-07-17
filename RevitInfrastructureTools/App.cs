@@ -27,6 +27,7 @@ namespace RevitInfrastructureTools
             {
                 CreateDWGtoRVTRibbon(application, tabName);
                 CreateBridgeDeckRibbon(application, tabName);
+                CreateArrangementRoadRibbon(application, tabName);
 
                 return Result.Succeeded;
             }
@@ -62,6 +63,15 @@ namespace RevitInfrastructureTools
             PushButtonData buttonData1 = CreateButtonData("AdaptationForSlopeOnePoint", "RevitCommand");
             PushButtonData buttonData2 = CreateButtonData("AdaptationForSlopeTwoPoints", "RevitCommand");
             ribbonPanel.AddStackedItems(buttonData1, buttonData2);
+        }
+
+        private void CreateArrangementRoadRibbon(UIControlledApplication uiapp, string tabName)
+        {
+            string str = "Обустройство";
+            RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
+
+            ribbonPanel.AddItem(CreateButtonData("SafetyBarriers", "RevitCommand"));
+            ribbonPanel.AddItem(CreateButtonData("NoiseBarriers", "RevitCommand"));
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
