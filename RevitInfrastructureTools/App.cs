@@ -25,7 +25,7 @@ namespace RevitInfrastructureTools
 
             try
             {
-                CreateDWGtoRVTRibbon(application, tabName);
+                CreateLineUtilsRibbon(application, tabName);
                 CreateBridgeDeckRibbon(application, tabName);
                 CreateArrangementRoadRibbon(application, tabName);
 
@@ -45,11 +45,12 @@ namespace RevitInfrastructureTools
             return Result.Succeeded;
         }
 
-        private void CreateDWGtoRVTRibbon(UIControlledApplication uiapp, string tabName)
+        private void CreateLineUtilsRibbon(UIControlledApplication uiapp, string tabName)
         {
-            string str = "DWG в RVT";
+            string str = "Линии";
             RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
             ribbonPanel.AddItem(CreateButtonData("DWGtoRVTLineConverter", "RevitCommand"));
+            ribbonPanel.AddItem(CreateButtonData("ProjectPlaneCurves", "RevitCommand"));
         }
 
         private void CreateBridgeDeckRibbon(UIControlledApplication uiapp, string tabName)
