@@ -73,6 +73,7 @@ namespace RevitInfrastructureTools
 
             ribbonPanel.AddItem(CreateButtonData("SafetyBarriers", "RevitCommand"));
             ribbonPanel.AddItem(CreateButtonData("NoiseBarriers", "RevitCommand"));
+            ribbonPanel.AddItem(CreateButtonData("LampPosts", "RevitCommand"));
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
