@@ -28,6 +28,7 @@ namespace RevitInfrastructureTools
                 CreateLineUtilsRibbon(application, tabName);
                 CreateBridgeDeckRibbon(application, tabName);
                 CreateArrangementRoadRibbon(application, tabName);
+                CreateMetalSuperStructureRibbon(application, tabName);
 
                 return Result.Succeeded;
             }
@@ -74,6 +75,14 @@ namespace RevitInfrastructureTools
             ribbonPanel.AddItem(CreateButtonData("SafetyBarriers", "RevitCommand"));
             ribbonPanel.AddItem(CreateButtonData("NoiseBarriers", "RevitCommand"));
             ribbonPanel.AddItem(CreateButtonData("LampPosts", "RevitCommand"));
+        }
+
+        private void CreateMetalSuperStructureRibbon(UIControlledApplication uiapp, string tabName)
+        {
+            string str = "Металлическое ПС";
+            RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
+
+            ribbonPanel.AddItem(CreateButtonData("MarkingSections", "RevitCommand"));
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
