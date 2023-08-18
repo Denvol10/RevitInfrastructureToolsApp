@@ -82,7 +82,11 @@ namespace RevitInfrastructureTools
             string str = "Металлическое ПС";
             RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
 
-            ribbonPanel.AddItem(CreateButtonData("MarkingSections", "RevitCommand"));
+            PushButtonData buttonData1 = CreateButtonData("MarkingSections", "RevitCommand");
+            PushButtonData buttonData2 = CreateButtonData("CreateBeamAxis", "RevitCommand");
+
+            ribbonPanel.AddItem(buttonData1);
+            ribbonPanel.AddItem(buttonData2);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
