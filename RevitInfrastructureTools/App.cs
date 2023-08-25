@@ -85,11 +85,13 @@ namespace RevitInfrastructureTools
             PushButtonData buttonData1 = CreateButtonData("MarkingSections", "RevitCommand");
             PushButtonData buttonData2 = CreateButtonData("CreateBeamAxis", "RevitCommand");
             PushButtonData buttonData3 = CreateButtonData("CreateSuperstructureBlocks", "RevitCommand");
+            PushButtonData buttonData4 = CreateButtonData("ReverseBlocks", "RevitCommand");
 
             ribbonPanel.AddItem(buttonData1);
             ribbonPanel.AddItem(buttonData2);
             ribbonPanel.AddSeparator();
             ribbonPanel.AddItem(buttonData3);
+            ribbonPanel.AddItem(buttonData4);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
