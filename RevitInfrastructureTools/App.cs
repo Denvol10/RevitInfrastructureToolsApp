@@ -27,8 +27,8 @@ namespace RevitInfrastructureTools
             {
                 CreateLineUtilsRibbon(application, tabName);
                 CreateBridgeDeckRibbon(application, tabName);
-                CreateArrangementRoadRibbon(application, tabName);
                 CreateMetalSuperStructureRibbon(application, tabName);
+                CreateArrangementRoadRibbon(application, tabName);
 
                 return Result.Succeeded;
             }
@@ -86,12 +86,14 @@ namespace RevitInfrastructureTools
             PushButtonData buttonData2 = CreateButtonData("CreateBeamAxis", "RevitCommand");
             PushButtonData buttonData3 = CreateButtonData("CreateSuperstructureBlocks", "RevitCommand");
             PushButtonData buttonData4 = CreateButtonData("ReverseBlocks", "RevitCommand");
+            PushButtonData buttonData5 = CreateButtonData("CrossElementsPosition", "RevitCommand");
 
             ribbonPanel.AddItem(buttonData1);
             ribbonPanel.AddItem(buttonData2);
             ribbonPanel.AddSeparator();
             ribbonPanel.AddItem(buttonData3);
             ribbonPanel.AddItem(buttonData4);
+            ribbonPanel.AddItem(buttonData5);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
