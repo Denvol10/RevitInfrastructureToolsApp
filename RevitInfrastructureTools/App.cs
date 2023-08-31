@@ -87,6 +87,7 @@ namespace RevitInfrastructureTools
             PushButtonData buttonData3 = CreateButtonData("CreateSuperstructureBlocks", "RevitCommand");
             PushButtonData buttonData4 = CreateButtonData("ReverseBlocks", "RevitCommand");
             PushButtonData buttonData5 = CreateButtonData("CrossElementsPosition", "RevitCommand");
+            PushButtonData buttonData6 = CreateButtonData("CreateCrossElements", "RevitCommand");
 
             ribbonPanel.AddItem(buttonData1);
             ribbonPanel.AddItem(buttonData2);
@@ -94,6 +95,7 @@ namespace RevitInfrastructureTools
             ribbonPanel.AddItem(buttonData3);
             ribbonPanel.AddItem(buttonData4);
             ribbonPanel.AddItem(buttonData5);
+            ribbonPanel.AddItem(buttonData6);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
