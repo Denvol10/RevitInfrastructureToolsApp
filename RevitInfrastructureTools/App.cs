@@ -29,6 +29,7 @@ namespace RevitInfrastructureTools
                 CreateBridgeDeckRibbon(application, tabName);
                 CreateMetalSuperStructureRibbon(application, tabName);
                 CreateArrangementRoadRibbon(application, tabName);
+                CreatePrefabricatedBeamsRibbon(application, tabName);
 
                 return Result.Succeeded;
             }
@@ -96,6 +97,16 @@ namespace RevitInfrastructureTools
             ribbonPanel.AddItem(buttonData4);
             ribbonPanel.AddItem(buttonData5);
             ribbonPanel.AddItem(buttonData6);
+        }
+
+        private void CreatePrefabricatedBeamsRibbon(UIControlledApplication uiapp, string tabName)
+        {
+            string str = "Сборно-монолитное ПС";
+            RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
+
+            PushButtonData buttonData1 = CreateButtonData("CreatePrefabricatedBeams", "RevitCommand");
+
+            ribbonPanel.AddItem(buttonData1);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
