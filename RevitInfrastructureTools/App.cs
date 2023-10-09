@@ -105,8 +105,10 @@ namespace RevitInfrastructureTools
             RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
 
             PushButtonData buttonData1 = CreateButtonData("CreatePrefabricatedBeams", "RevitCommand");
+            PushButtonData buttonData2 = CreateButtonData("GetBeamTopLines", "RevitCommand");
 
             ribbonPanel.AddItem(buttonData1);
+            ribbonPanel.AddItem(buttonData2);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
