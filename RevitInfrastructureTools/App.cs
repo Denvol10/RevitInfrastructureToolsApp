@@ -52,6 +52,7 @@ namespace RevitInfrastructureTools
             string str = "Линии";
             RibbonPanel ribbonPanel = uiapp.CreateRibbonPanel(tabName, str);
             ribbonPanel.AddItem(CreateButtonData("DWGtoRVTLineConverter", "RevitCommand"));
+            ribbonPanel.AddItem(CreateButtonData("SaveLinesInOtherDocument", "RevitCommand"));
             ribbonPanel.AddItem(CreateButtonData("ProjectPlaneCurves", "RevitCommand"));
         }
 
