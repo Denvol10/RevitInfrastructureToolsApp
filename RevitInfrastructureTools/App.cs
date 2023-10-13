@@ -107,9 +107,12 @@ namespace RevitInfrastructureTools
 
             PushButtonData buttonData1 = CreateButtonData("CreatePrefabricatedBeams", "RevitCommand");
             PushButtonData buttonData2 = CreateButtonData("GetBeamTopLines", "RevitCommand");
+            PushButtonData buttonData3 = CreateButtonData("SlabOnGradient", "RevitCommand");
 
             ribbonPanel.AddItem(buttonData1);
             ribbonPanel.AddItem(buttonData2);
+            ribbonPanel.AddSeparator();
+            ribbonPanel.AddItem(buttonData3);
         }
 
         public PushButtonData CreateButtonData(string assemblyName, string className)
